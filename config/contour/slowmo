@@ -1,0 +1,12 @@
+#! /bin/bash
+# let's create a command called: slowmo [COMMAND ...]
+onExit() {
+    echo "EXIT"
+    printf "\033[?4h"
+    printf "\033[9 p"
+}
+trap onExit EXIT # EDIT: fixed order of args here
+printf "\033[?4h"
+printf "\033[1 p"
+"${@}"
+onExit

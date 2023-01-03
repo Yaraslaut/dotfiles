@@ -1,0 +1,10 @@
+profiles:
+  main:
+    font:
+      regular:
+        family: "LiberationMono"
+
+  one_more:
+    font:
+      regular:
+        family: "Hack"

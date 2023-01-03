@@ -1,0 +1,17 @@
+[user]
+	email = yaraslau.tamashevich@gmail.com
+	name = Yaraslau Tamashevich
+[credential]
+	helper = store
+[pull]
+	ff = only
+[core]
+	editor = emacs
+[safe]
+	directory = *
+[transfer]
+	fsckObjects = true
+[alias]
+	st = status
+	cm = commit -m
+	pl = pull
