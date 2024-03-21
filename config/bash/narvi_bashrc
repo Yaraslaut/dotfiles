@@ -1,0 +1,13 @@
+
+# Hishtory Config:
+export PATH="$PATH:/home/mnyata/.hishtory"
+source $HOME/.hishtory/config.sh
+
+LOC_HOME="/home/mnyata"
+alias te="emacs -nw"
+
+export PYTHONPATH="/home/mnyata/repository/fdtd/lib/python3.10/site-packages"
+module load GCC/11.3.0
+module load Python/3.10.4-GCCcore-11.3.0
+
+echo "Welcome to narvi"

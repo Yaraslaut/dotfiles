@@ -1,13 +1,23 @@
 
 # Hishtory Config:
-export PATH="$PATH:/home/mnyata/.hishtory"
+export PATH="/home/mnyata/.hishtory:/worktmp/yaraslau/.local/bin:/worktmp/yaraslau/llvm-17/bin:$PATH"
+export PYTHONPATH="/opt/lintula/worktmp/yaraslau/repository/fdtd/lib/python3.12/site-packages"
 source $HOME/.hishtory/config.sh
+
+export LD_LIBRARY_PATH="/worktmp/yaraslau/repository/fdtd/lib:/worktmp/yaraslau/.local/lib"
+
+LOC_HOME="/worktmp/yaraslau"
+alias te="emacs -nw"
 
 # Zoxide Config:
 eval "$(zoxide init bash)"
 
 alias cd='z'
 
-LOC_HOME="/worktmp/yaraslau"
-
 echo "Welcome to bahamankolibri"
+
+
+chafa()
+{
+   convert $1 sixel:-
+}

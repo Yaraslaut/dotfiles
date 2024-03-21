@@ -5,7 +5,7 @@ CURRENT_DIR="$( dirname -- "$BASH_SOURCE"; )"
 unamestr=$(uname -n)
 if [[ "$unamestr" == 'bahamankolibri.lin.tuni.fi' ]]; then
 	source "$CURRENT_DIR/bahamankolibri_bashrc"
-elif [[ "$unamestr" == 'narvi.tut.fi' ]]; then
+elif [[ "$unamestr" == 'narvi.cc.tut.fi' ]]; then
 	source "$CURRENT_DIR/narvi_bashrc"
 fi
 
@@ -13,7 +13,6 @@ alias ls='ls --color=auto'
 alias ll='ls -la'
 alias cdr="cd $LOC_HOME/repository"
 alias ..="cd .."
-alias te="emacsclient -nw"
 alias pull="git pull"
 
 export PATH="$LOC_HOME/.local/bin:$PATH"
