@@ -354,7 +354,6 @@ profiles:
                 # Fira Code", "Courier New", or "monospace" (default).
                 #family: "MonaspiceXeNerdFont"
                 family: "cascadiaCode"
-                #family: "Hack"
                 #family: "JetBrainsMono Nerd Font"
 
                 # Font weight can be one of:
@@ -610,9 +609,9 @@ color_schemes:
         # Values must be in RGB form.
         indicator_statusline:
             # Default: default background
-            foreground: '#0f0002'
+            foreground: '#FFFFFF'
             # Default: default foreground
-            background: '#c2bebe'
+            background: '#0270C0'
 
         # Alternate colors to be used for the indicator status line when
         # this terminal is currently not in focus.

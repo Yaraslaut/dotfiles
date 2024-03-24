@@ -5,6 +5,7 @@ source $HOME/.hishtory/config.sh
 
 LOC_HOME="/home/mnyata"
 alias te="emacs -nw"
+alias cdr="cd $LOC_HOME/repository"
 
 export PYTHONPATH="/home/mnyata/repository/fdtd/lib/python3.10/site-packages"
 module load GCC/11.3.0

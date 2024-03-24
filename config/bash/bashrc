@@ -7,11 +7,12 @@ if [[ "$unamestr" == 'bahamankolibri.lin.tuni.fi' ]]; then
 	source "$CURRENT_DIR/bahamankolibri_bashrc"
 elif [[ "$unamestr" == 'narvi.cc.tut.fi' ]]; then
 	source "$CURRENT_DIR/narvi_bashrc"
+elif [[ "$unamestr" == 'Cartan' ]]; then
+	source "$CURRENT_DIR/cartan_bashrc"
 fi
 
 alias ls='ls --color=auto'
 alias ll='ls -la'
-alias cdr="cd $LOC_HOME/repository"
 alias ..="cd .."
 alias pull="git pull"
 
