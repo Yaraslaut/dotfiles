@@ -1,15 +1,16 @@
 
 # Hishtory Config:
-export PATH="/home/yaraslau/python_env/bin:$PATH:/home/yaraslau/.hishtory"
+export LOC_PATH="/home/yaraslau/python_env/bin:/home/yaraslau/.hishtory"
 export PYTHONPATH="/home/yaraslau/repo/fdtd/lib/python3.11/site-packages"
 source $HOME/.hishtory/config.sh
 
 LOC_HOME="/home/yaraslau"
-alias te="emacsclient "
+alias te="emacsclient"
 
 # Zoxide Config:
-#eval "$(zoxide init bash)"
+eval "$(zoxide init bash)"
 
+alias cd='z'
 alias cdr='cd /home/yaraslau/repo'
 
 echo "Welcome to Cartan"
