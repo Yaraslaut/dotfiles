@@ -30,4 +30,4 @@
    lsp-clients-clangd-args '("--header-insertion-decorators=0" "--pch-storage=disk" "--clang-tidy")
 ))
 
-lsp-clients-clangd-executable
+(setq copilot-node-executable "/worktmp/yaraslau/programs/node-v20.12.2-linux-x64/bin/node")

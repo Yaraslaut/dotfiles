@@ -1,6 +1,6 @@
 
 # Hishtory Config:
-export PATH="/home/mnyata/.hishtory:/worktmp/yaraslau/.local/bin:/worktmp/yaraslau/llvm-17/bin:$PATH"
+export LOC_PATH="/home/mnyata/.hishtory:/worktmp/yaraslau/.local/bin:/worktmp/yaraslau/llvm-17/bin:$PATH"
 export PYTHONPATH="/opt/lintula/worktmp/yaraslau/repository/fdtd/lib/python3.12/site-packages"
 source $HOME/.hishtory/config.sh
 

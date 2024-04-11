@@ -10,12 +10,14 @@
 (setq switch-window-shortcut-style 'qwerty)
 
 
-(if (string-equal system-name "bahamankolibri.lin.tuni.fi")
-    ()
-    (package! copilot
-      :recipe (:host github :repo "copilot-emacs/copilot.el" :files ("*.el" "dist")))
+(if (string-equal system-name "bahamankolibri.lin.tuni.fi")  
+     (setq copilot-node-executable "/worktmp/yaraslau/programs/node-v20.12.2-linux-x64/bin/node")
+  ()
 )
 
+
+(package! copilot
+      :recipe (:host github :repo "copilot-emacs/copilot.el" :files ("*.el" "dist")))
 
 ;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:
 ;; (package! some-package)

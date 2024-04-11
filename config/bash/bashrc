@@ -2,11 +2,11 @@ CURRENT_DIR="$( dirname -- "$BASH_SOURCE"; )"
 # LOAD system dependent configuration
 unamestr=$(uname -n)
 if [[ "$unamestr" == 'bahamankolibri.lin.tuni.fi' ]]; then
-	source "$CURRENT_DIR/bahamankolibri_bashrc"
+  source "$CURRENT_DIR/bahamankolibri_bashrc"
 elif [[ "$unamestr" == 'narvi.cc.tut.fi' ]]; then
-	source "$CURRENT_DIR/narvi_bashrc"
+  source "$CURRENT_DIR/narvi_bashrc"
 elif [[ "$unamestr" == 'Cartan' ]]; then
-	source "$CURRENT_DIR/cartan_bashrc"
+  source "$CURRENT_DIR/cartan_bashrc"
 fi
 
 alias ls='ls --color=auto'
@@ -33,6 +33,8 @@ fi
 export PATH="$LOC_HOME/.juliaup/bin:$PATH"
 export JULIA_DEPOT_PATH="$LOC_HOME/.julia"
 
+# Setup Caro
+export CARGO_HOME="$LOC_HOME/.cargo"
 commit () {
   git add -A
   git commit -m "$1"
