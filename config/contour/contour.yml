@@ -469,6 +469,12 @@ profiles:
             hover: underline
 
 
+    starfive:
+        ssh:
+            host: 192.168.50.20
+            port: 22
+            user: user
+
     large:
         terminal_size:
             columns: 120
@@ -656,6 +662,7 @@ color_schemes:
         #     magenta: '#a36ac7'
         #     cyan:    '#3971ed'
         #     white:   '#c5c8c6'
+
 
 # Key Bindings
 # ------------

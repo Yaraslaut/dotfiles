@@ -13,6 +13,8 @@ alias ls='ls --color=auto'
 alias ll='ls -la'
 alias ..="cd .."
 alias pull="git pull"
+alias c="cmake -S . -B build -G Ninja"
+alias b="cmake --build build"
 
 export PATH="/usr/bin"
 export PATH="$LOC_HOME/.local/bin:$LOC_PATH:$PATH"
