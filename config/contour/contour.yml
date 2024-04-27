@@ -352,8 +352,8 @@ profiles:
             regular:
                 # Font family defines the font family name, such as:
                 # Fira Code", "Courier New", or "monospace" (default).
-                #family: "MonaspiceXeNerdFont"
-                family: "cascadiaCode"
+                family: "MonaspiceKrNerdFont"
+                #family: "cascadiaCode"
                 #family: "JetBrainsMono Nerd Font"
 
                 # Font weight can be one of:
@@ -371,7 +371,7 @@ profiles:
                 # supports.
                 #
                 # Default: []
-                #features: []
+                features: [dlig]
 
             # If bold/italic/bold_italic are not explicitly specified, the regular font with
             # the respective weight and slant will be used.
