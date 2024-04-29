@@ -96,7 +96,7 @@ screen.connect_signal("request::wallpaper", function(s)
         widget = {
             {
                 image     = beautiful.wallpaper,
-                upscale   = false,
+                upscale   = true,
                 downscale = true,
                 --horizontal_fit_policy = "fit",
                 --vertical_fit_policy   = "fit",
