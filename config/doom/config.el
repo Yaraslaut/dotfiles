@@ -1,9 +1,8 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
 (setq doom-font-increment 1)
-(setq me/doom-font-size 15)
-(setq me/doom-variable-font-size 15)
-(setq doom-font (font-spec :family "Fira Code" :size me/doom-font-size))
+(setq me/doom-font-size 14)
+(setq doom-font (font-spec :family "MonaspiceKrNerdFont" :size me/doom-font-size))
 (setq doom-theme 'doom-acario-dark)
 
 (use-package! copilot

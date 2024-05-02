@@ -60,7 +60,7 @@
        markdown          ; writing docs for people to ignore
        org               ; organize your plain life in plain text
        python            ; beautiful is better than ugly
-       (rust +lsp)       ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
+       ;(rust +lsp)       ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
        sh                ; she sells {ba,z,fi}sh shells on the C xor
        yaml              ; JSON, but readable
        ;;zig               ; C, but simpler
