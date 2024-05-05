@@ -13,5 +13,10 @@ eval "$(zoxide init bash)"
 alias cd='z'
 alias cdr='cd /home/yaraslau/repo'
 
+
+export MODULAR_HOME="/home/yaraslau/.modular"
+export LOC_PATH="/home/yaraslau/.modular/pkg/packages.modular.com_mojo/bin:$LOC_PATH"
+export LD_LIBRARY_PATH="/home/yaraslau/.local/lib/mojo:$LD_LIBRARY_PATH"
+
 echo "Welcome to Cartan"
 

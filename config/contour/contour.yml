@@ -216,7 +216,7 @@ profiles:
         maximized: false
 
         bell:
-            sound: "off"
+          sound: "off"
 
         # Defines the class part of the WM_CLASS property of the window.
         wm_class: "contour"
