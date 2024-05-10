@@ -1,8 +1,9 @@
 
 # Hishtory Config:
-export LOC_PATH="/home/yaraslau/python_env/bin:/home/yaraslau/.hishtory:/usr/local/cuda-11.5/bin"
+export LOC_PATH="/home/yaraslau/.hishtory:/usr/local/cuda-11.5/bin"
 export PYTHONPATH="/home/yaraslau/repo/fdtd/lib/python3.11/site-packages"
 source $HOME/.hishtory/config.sh
+alias python="/home/yaraslau/python_env/bin/python"
 
 LOC_HOME="/home/yaraslau"
 alias te="emacsclient"
@@ -16,7 +17,10 @@ alias cdr='cd /home/yaraslau/repo'
 
 export MODULAR_HOME="/home/yaraslau/.modular"
 export LOC_PATH="/home/yaraslau/.modular/pkg/packages.modular.com_mojo/bin:$LOC_PATH"
-export LD_LIBRARY_PATH="/home/yaraslau/.local/lib/mojo:$LD_LIBRARY_PATH"
+export LD_LIBRARY_PATH="/usr/lib:/home/yaraslau/.local/lib/mojo:$LD_LIBRARY_PATH"
+
+# fix julia bug see https://github.com/JuliaLang/julia/issues/51264
+alias julia="LD_LIBRARY_PATH=\"\" julia"
 
 echo "Welcome to Cartan"
 

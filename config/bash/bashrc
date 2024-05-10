@@ -32,7 +32,6 @@ fi
 
 
 # Setup Julia
-export PATH="$LOC_HOME/.juliaup/bin:$PATH"
 export JULIA_DEPOT_PATH="$LOC_HOME/.julia"
 
 # Setup Caro

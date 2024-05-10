@@ -304,73 +304,24 @@ profiles:
         font:
             # Initial font size in pixels.
             size: 13
-
-            # Font Locator API
-            # Selects an engine to use for locating font files on the system.
-            # This is implicitly also responsible for font fallback
-            # Possible values are:
-            # - native          : automatically choose the best available on the current platform
-            # - fontconfig      : uses fontconfig to select fonts
-            # - CoreText        : uses OS/X CoreText to select fonts.
-            # - DirectWrite     : selects DirectWrite engine (Windows only)
             locator: native
 
-            # Text shaping related settings
             text_shaping:
-                # Selects which text shaping and font rendering engine to use.
-                # Supported values are:
-                # - native      : automatically choose the best available on the current platform.
-                # - DirectWrite : selects DirectWrite engine (Windows only)
-                # - CoreText    : selects CoreText engine (Mac OS/X only) (currently not implemented)
-                # - OpenShaper  : selects OpenShaper (harfbuzz/freetype/fontconfig, available on all
-                #                 platforms)
                 engine: native
 
-            # Uses builtin textures for pixel-perfect box drawing.
-            # If disabled, the font's provided box drawing characters
-            # will be used (Default: true).
             builtin_box_drawing: true
 
-            # Font render modes tell the font rasterizer engine what rendering technique to use.
-            #
-            # Modes available are:
-            # - lcd          Uses a subpixel rendering technique optimized for LCD displays.
-            # - light        Uses a subpixel rendering technique in gray-scale.
-            # - gray         Uses standard gray-scaled anti-aliasing.
-            # - monochrome   Uses pixel-perfect bitmap rendering.
             render_mode: lcd
 
-            # Indicates whether or not to include *only* monospace fonts in the font and
-            # font-fallback list (Default: true).
             strict_spacing: true
 
-            # Font family to use for displaying text.
-            #
-            # A font can be either described in detail as below or as a
-            # simple string value (e.g. "monospace" with the appropriate
-            # weight/slant applied automatically).
             regular:
-                # Font family defines the font family name, such as:
-                # Fira Code", "Courier New", or "monospace" (default).
                 family: "MonaspiceKrNerdFont"
                 #family: "cascadiaCode"
                 #family: "JetBrainsMono Nerd Font"
 
-                # Font weight can be one of:
-                #   thin, extra_light, light, demilight, book, normal,
-                #   medium, demibold, bold, extra_bold, black, extra_black.
                 weight: normal
-
-                # Font slant can be one of: normal, italic, oblique.
                 slant: normal
-
-                # Set of optional font features to be enabled. This
-                # is usually a 4-letter code, such as ss01 or ss02 etc.
-                #
-                # Please see your font's documentation to find out what it
-                # supports.
-                #
-                # Default: []
                 features: [dlig]
 
             # If bold/italic/bold_italic are not explicitly specified, the regular font with
@@ -382,7 +333,8 @@ profiles:
             # This is a special font to be used for displaying unicode symbols
             # that are to be rendered in emoji presentation.
             # Defaults to "emoji".
-            emoji: "NotoColorEmoji"
+            emoji: "emoji"
+            #emoji: "NotoColorEmoji"
 
         # Indicates whether or not bold text should be rendered in bright colors,
         # for indexed colors.
