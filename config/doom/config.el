@@ -16,7 +16,7 @@
 
 (if (string-equal system-name "bahamankolibri.lin.tuni.fi")
     (setq system-clangd "/bin/clangd")
-  (setq system-clangd "/home/yaraslau/.local/llvm-17/bin/clangd")
+  (setq system-clangd "/home/yaraslau/.local/llvm-18/bin/clangd")
   )
 
 (use-package! lsp  ; `use-package!' is a thin wrapper around `use-package'
