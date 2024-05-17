@@ -1,6 +1,6 @@
 
 # Hishtory Config:
-export LOC_PATH="/home/yaraslau/.hishtory:/usr/local/cuda-11.5/bin"
+export LOC_PATH="/home/yaraslau/.hishtory"
 export PYTHONPATH="/home/yaraslau/repo/fdtd/lib/python3.11/site-packages"
 source $HOME/.hishtory/config.sh
 alias python="/home/yaraslau/python_env/bin/python"
