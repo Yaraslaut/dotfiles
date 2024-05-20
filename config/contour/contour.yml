@@ -316,7 +316,7 @@ profiles:
             strict_spacing: true
 
             regular:
-                family: "MonaspiceKrNerdFont"
+                family: "MonaspaceKrypton"
                 #family: "cascadiaCode"
                 #family: "JetBrainsMono Nerd Font"
 
