@@ -16,6 +16,10 @@
 )
 
 
+(package! typst-ts-mode
+  :recipe (:host sourcehut :repo "meow_king/typst-ts-mode" :files (:defaults "*.el"))
+  )
+
 (package! copilot
       :recipe (:host github :repo "copilot-emacs/copilot.el" :files ("*.el" "dist")))
 
