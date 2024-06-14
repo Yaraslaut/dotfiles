@@ -1,9 +1,7 @@
-
+CURRENT_DIR="$( dirname -- "$BASH_SOURCE"; )"
 # Hishtory Config:
-export LOC_PATH="/home/yaraslau/.hishtory:/usr/local/bin"
-export PYTHONPATH="/home/yaraslau/repo/fdtd/lib/python3.11/site-packages"
-source $HOME/.hishtory/config.sh
-alias python="/home/yaraslau/python_env/bin/python"
+export LOC_PATH="/home/yaraslau/python_env/bin/pip:/home/yaraslau/.hishtory:/usr/local/bin"
+export PYTHONPATH="/home/yaraslau/repo/meep_build/lib/python3.12/site-packages"
 
 LOC_HOME="/home/yaraslau"
 alias te="emacsclient"
@@ -14,7 +12,6 @@ eval "$(zoxide init bash)"
 alias cd='z'
 alias cdr='cd /home/yaraslau/repo'
 
-
 export MODULAR_HOME="/home/yaraslau/.modular"
 export LOC_PATH="/home/yaraslau/.modular/pkg/packages.modular.com_mojo/bin:$LOC_PATH"
 export LD_LIBRARY_PATH="/usr/lib:/home/yaraslau/.local/lib/mojo:$LD_LIBRARY_PATH"
@@ -22,5 +19,6 @@ export LD_LIBRARY_PATH="/usr/lib:/home/yaraslau/.local/lib/mojo:$LD_LIBRARY_PATH
 # fix julia bug see https://github.com/JuliaLang/julia/issues/51264
 alias julia="LD_LIBRARY_PATH=\"\" julia"
 
-echo "Welcome to Cartan"
+eval "$(fzf --bash)"
 
+echo "Welcome to Cartan"

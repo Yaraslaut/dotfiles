@@ -30,6 +30,9 @@ if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]; then
     source "$HOME/.bash-git-prompt/gitprompt.sh"
 fi
 
+# settings for bash history
+HISTSIZE=50000
+HISTFILESIZE=50000
 
 # Setup Julia
 export JULIA_DEPOT_PATH="$LOC_HOME/.julia"

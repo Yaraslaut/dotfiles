@@ -49,7 +49,9 @@ renderer:
     tile_direct_mapping: true
 
 # Word delimiters when selecting word-wise.
-word_delimiters: " /\\()\"'-.,:;<>~!@#$%^&*+=[]{}~?|│"
+#word_delimiters: " /\\()\"'-.,:;<>~!@#$%^&*+=[]{}~?|│"
+word_delimiters: ":"
+extended_word_delimiters: "[]"
 
 # Default PTY read buffer size.
 #
@@ -68,7 +70,7 @@ early_exit_threshold: 0
 
 # Flag to determine whether to spawn new process or not when creating new terminal
 # Default: false
-spawn_new_process: true
+spawn_new_process: false
 
 # Whether or not to reflow the lines on terminal resize events.
 # Default: true
@@ -215,6 +217,9 @@ profiles:
         # whether or not to put the window into maximized mode.
         maximized: false
 
+        # Whether or not to switch from search mode into insert on exit
+        # search_mode_switch: false
+
         bell:
           sound: "off"
 
@@ -250,7 +255,7 @@ profiles:
 
         history:
             # Number of lines to preserve (-1 for infinite).
-            limit: 10000
+            limit: 1000000
             # Boolean indicating whether or not to scroll down to the bottom on screen updates.
             auto_scroll_on_update: true
             # Number of lines to scroll on ScrollUp & ScrollDown events.
@@ -316,6 +321,7 @@ profiles:
             strict_spacing: true
 
             regular:
+                #family: "SFMono"
                 family: "MonaspiceKrNerdFont"
                 #family: "cascadiaCode"
                 #family: "JetBrainsMono Nerd Font"
@@ -713,7 +719,7 @@ color_schemes:
 # - WriteScreen       Writes VT sequence in `chars` member to the screen (bypassing the application).
 
 input_mapping:
-    - { mods: [Control],        mouse: Left,        action: FollowHyperlink }
+    #- { mods: [Control],        mouse: Left,        action: CreateSelection, chars: " " }
     - { mods: [],               mouse: Middle,      action: PasteSelection, mode: 'Insert'}
     - { mods: [],               mouse: WheelDown,   action: ScrollDown }
     - { mods: [],               mouse: WheelUp,     action: ScrollUp }
