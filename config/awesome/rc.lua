@@ -258,7 +258,7 @@ awful.keyboard.append_global_keybindings({
               {description = "run Telegram", group = "Telegram"}),
     awful.key({ modkey,           }, "y", function () awful.spawn("palemoon") end,
               {description = "run Pale-Moon", group = "PaleMoon"}),
-    awful.key({ modkey,           }, "e", function () awful.spawn("emacs") end,
+    awful.key({ modkey,           }, "e", function () awful.spawn("/home/yaraslau/.local/bin/emacs") end,
               {description = "run emacs", group = "emacs"}),
     awful.key({ modkey,           }, "c", function () awful.spawn("/home/yaraslau/.local/bin/contour") end,
               {description = "run contour", group = "contour"}),
