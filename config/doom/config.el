@@ -14,10 +14,7 @@
               ("C-<tab>" . 'copilot-accept-completion-by-word)))
 
 
-(if (string-equal system-name "bahamankolibri.lin.tuni.fi")
-    (setq system-clangd "/bin/clangd")
-  (setq system-clangd "/home/yaraslau/.local/llvm-18/bin/clangd")
-  )
+(setq system-clangd "/bin/clangd")
 
 (use-package! lsp  ; `use-package!' is a thin wrapper around `use-package'
                        ; it is required that you use this in Doom's modules,

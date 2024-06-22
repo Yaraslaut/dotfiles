@@ -49,9 +49,8 @@ renderer:
     tile_direct_mapping: true
 
 # Word delimiters when selecting word-wise.
-#word_delimiters: " /\\()\"'-.,:;<>~!@#$%^&*+=[]{}~?|│"
-word_delimiters: ":"
-extended_word_delimiters: "[]"
+word_delimiters: " /\\()\"'-.,:;<>~!@#$%^&*+=[]{}~?|│"
+#extended_word_delimiters: ""
 
 # Default PTY read buffer size.
 #
@@ -222,6 +221,8 @@ profiles:
 
         bell:
           sound: "off"
+          volume: 1.0
+          alert: true
 
         # Defines the class part of the WM_CLASS property of the window.
         wm_class: "contour"
