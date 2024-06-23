@@ -25,3 +25,5 @@
    lsp-clients-clangd-executable system-clangd
    lsp-clients-clangd-args '("--header-insertion-decorators=0" "--pch-storage=disk" "--clang-tidy")
 ))
+
+(add-hook 'after-save-hook 'lsp-format-buffer)
