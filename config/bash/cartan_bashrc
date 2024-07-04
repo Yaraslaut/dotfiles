@@ -1,6 +1,6 @@
 CURRENT_DIR="$( dirname -- "$BASH_SOURCE"; )"
 # Hishtory Config:
-export LOC_PATH="/home/yaraslau/python_env/bin/pip:/home/yaraslau/.hishtory:/usr/local/bin"
+export LOC_PATH="/home/yaraslau/python_env/bin/pip:/home/yaraslau/.hishtory:/usr/local/bin:/home/yaraslau/.juliaup/bin"
 export PYTHONPATH="/home/yaraslau/repo/meep_build/lib/python3.12/site-packages"
 
 LOC_HOME="/home/yaraslau"

@@ -220,8 +220,8 @@ profiles:
         # search_mode_switch: false
 
         bell:
-          sound: "off"
-          volume: 1.0
+          sound: "default"
+          volume: 0.1
           alert: true
 
         # Defines the class part of the WM_CLASS property of the window.
@@ -328,6 +328,8 @@ profiles:
                 engine: native
 
             builtin_box_drawing: true
+
+            use_font_fallback: false
 
             render_mode: lcd
 
@@ -516,7 +518,7 @@ color_schemes:
         # The value format is equivalent to how selection colors and alpha contribution is defined.
         # To disable cursorline in vi_mode, set foreground to CellForeground and background to CellBackground.
         vi_mode_cursorline:
-            foreground: '#ffffff'
+            foreground: '#ffaaff'
             foreground_alpha: 0.2
             background: '#808080'
             background_alpha: 0.4
@@ -585,18 +587,19 @@ color_schemes:
         # Defines the colors to be used for the Indicator status line.
         # Values must be in RGB form.
         indicator_statusline:
-            # Default: default background
-            foreground: '#FFFFFF'
-            # Default: default foreground
-            background: '#0270C0'
+            default:
+                foreground: '#FFFFFF'
+                background: '#0270C0'
+            inactive:
+                foreground: '#FFFFFF'
+                background: '#0270C0'
+            normal_mode:
+                foreground: '#0f0002'
+                background: '#0270C0'
+            visual_mode:
+                foreground: '#ffffff'
+                background: '#0270C0'
 
-        # Alternate colors to be used for the indicator status line when
-        # this terminal is currently not in focus.
-        indicator_statusline_inactive:
-            # Default: default background
-            foreground: '#0f0002'
-            # Default: default foreground
-            background: '#c2bebe'
 
         # Colors for the IME (Input Method Editor) area.
         input_method_editor:
@@ -733,7 +736,7 @@ color_schemes:
 
 input_mapping:
     #- { mods: [Control],        mouse: Left,        action: CreateSelection, chars: " " }
-    - { mods: [],               mouse: Middle,      action: PasteSelection, mode: 'Insert'}
+    - { mods: [],               mouse: Middle,      action: PasteSelection, mode: 'Insert', evaluate_in_shell: true}
     - { mods: [],               mouse: WheelDown,   action: ScrollDown }
     - { mods: [],               mouse: WheelUp,     action: ScrollUp }
     - { mods: [Alt],            key: Enter,         action: ToggleFullscreen }
@@ -772,6 +775,6 @@ input_mapping:
     - { mods: [Control, Shift], key: 'H',           action: NoSearchHighlight }
     - { mods: [],               key: 'F3',          action: FocusNextSearchMatch }
     - { mods: [Shift],          key: 'F3',          action: FocusPreviousSearchMatch }
-      #- { mods: [Control],        key: i,             action: WriteScreen, chars: '\033]888'}
+    - { mods: [Control],        key: I,             action: SendChars, chars: 'ls\n'}
       #- { mods: [Control],        key: o,             action: WriteScreen, chars: '\033[?4h \033[1 p'}
       #- { mods: [Control],        key: p,             action: WriteScreen, chars: '\033[?4h \033[9 p'}
