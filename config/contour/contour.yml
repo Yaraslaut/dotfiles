@@ -329,8 +329,6 @@ profiles:
 
             builtin_box_drawing: true
 
-            use_font_fallback: false
-
             render_mode: lcd
 
             strict_spacing: true
@@ -344,6 +342,7 @@ profiles:
                 weight: normal
                 slant: normal
                 features: [dlig]
+                fallback: [ "Unifont", "JuliaMono" ]
 
             # If bold/italic/bold_italic are not explicitly specified, the regular font with
             # the respective weight and slant will be used.
