@@ -194,6 +194,7 @@ screen.connect_signal("request::desktop_decoration", function(s)
      height = 32,
 --     margins = 1,
      --align    = "center",
+       bg = "#000000",
      widget   = {
        layout = wibox.layout.align.horizontal,
        { -- Left widgets
@@ -204,10 +205,7 @@ screen.connect_signal("request::desktop_decoration", function(s)
        {
          layout = wibox.container.place,
          halign = "center",
-         wibox.widget {
-           format = "%a %d %b %H:%M",
-           widget = wibox.widget.textclock,
-         }
+         wibox.widget.textclock('%a %b %d, %H:%M'),
        },
        { -- Right widgets
          layout = wibox.layout.fixed.horizontal,
@@ -226,6 +224,16 @@ screen.connect_signal("request::desktop_decoration", function(s)
             step_spacing = 0,
             color = '#21e60b'
          }),
+         spacing = 10,
+         wibox.widget{
+             {
+                 id = "ip_text",
+                 widget=wibox.widget.textbox
+             },
+             set_ip_text = function(setf, text)
+                 setlf.text = text
+             end
+         },
          spacing = 10,
          net_speed_widget(),
          spacing = 10,
@@ -256,8 +264,6 @@ awful.keyboard.append_global_keybindings({
               {description = "run firefox", group = "firefox"}),
     awful.key({ modkey,           }, "t", function () awful.spawn("/home/yaraslau/prog/Telegram/Telegram") end,
               {description = "run Telegram", group = "Telegram"}),
-    awful.key({ modkey,           }, "y", function () awful.spawn("palemoon") end,
-              {description = "run Pale-Moon", group = "PaleMoon"}),
     awful.key({ modkey,           }, "e", function () awful.spawn("/home/yaraslau/.local/bin/emacs") end,
               {description = "run emacs", group = "emacs"}),
     awful.key({ modkey,           }, "c", function () awful.spawn("/home/yaraslau/.local/bin/contour") end,
