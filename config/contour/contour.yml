@@ -217,10 +217,10 @@ profiles:
         maximized: false
 
         # Whether or not to switch from search mode into insert on exit
-        # search_mode_switch: false
+        search_mode_switch: false
 
         bell:
-          sound: "default"
+          sound: "off"
           volume: 0.1
           alert: true
 
