@@ -1,0 +1,31 @@
+export HISTSIZE=50000
+export SAVEHIST=50000
+ZSH_THEME="robbyrussell"
+
+# get current directory
+BASEDIR=$(dirname "$0")
+
+# check system name
+systemName=$(uname -n)
+if [ $systemName = "Cartan" ]; then
+    source $BASEDIR/cartan
+else
+fi
+alias cdr="cd $LOC_HOME/repo"
+
+
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+source $BASEDIR/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+source $BASEDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+echo "Welcome to $systemName"
+
+plugins=(git fzf history)
+
+alias ls='ls --color=auto'
+alias l='ls -la'
+alias ..="cd .."
+alias pull="git pull"
+alias c="cmake -S . -B build -G Ninja"
+alias b="cmake --build build"
