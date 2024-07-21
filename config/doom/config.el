@@ -2,8 +2,18 @@
 
 (setq doom-font-increment 1)
 (setq me/doom-font-size 14)
-(setq doom-font (font-spec :family "MonaspiceKrNerdFont" :size me/doom-font-size))
-(setq doom-theme 'doom-acario-dark)
+
+
+;;; check system name
+
+
+;;; only for not Green.local
+(cond ( (equal system-name "Green.local") )
+      ( t (
+        (setq doom-font (font-spec :family "MonaspiceKrNerdFont" :size me/doom-font-size))
+        (setq doom-theme 'doom-acario-dark)
+        ))
+)
 
 (use-package! copilot
   :hook (prog-mode . copilot-mode)
@@ -14,7 +24,7 @@
               ("C-<tab>" . 'copilot-accept-completion-by-word)))
 
 
-(setq system-clangd "/bin/clangd")
+(setq system-clangd "/usr/bin/clangd")
 
 (use-package! lsp  ; `use-package!' is a thin wrapper around `use-package'
                        ; it is required that you use this in Doom's modules,
@@ -26,4 +36,9 @@
    lsp-clients-clangd-args '("--header-insertion-decorators=0" "--pch-storage=disk" "--clang-tidy")
 ))
 
-(add-hook 'after-save-hook 'lsp-format-buffer)
+
+
+;;; only for not Green.local
+(cond ( (equal system-name "Green.local") )
+      ( t (add-hook 'after-save-hook 'lsp-format-buffer))
+)

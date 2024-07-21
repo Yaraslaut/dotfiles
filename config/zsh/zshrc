@@ -9,8 +9,12 @@ BASEDIR=$(dirname "$0")
 systemName=$(uname -n)
 if [ $systemName = "Cartan" ]; then
     source $BASEDIR/cartan
+elif [ $systemName = "Green.local" ]; then
+   source $BASEDIR/green
 else
 fi
+
+export PATH="$PATH:$LOC_PATH"
 alias cdr="cd $LOC_HOME/repo"
 
 
