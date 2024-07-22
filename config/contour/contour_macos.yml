@@ -335,7 +335,7 @@ profiles:
 
             regular:
                 #family: "SFMono"
-                family: "MonaspiceKrNerdFont"
+                family: "MonaspiceKr Nerd Font"
                 #family: "cascadiaCode"
                 #family: "JetBrainsMono Nerd Font"
 
