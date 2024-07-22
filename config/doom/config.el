@@ -9,10 +9,10 @@
 
 ;;; only for not Green.local
 (cond ( (equal system-name "Green.local") )
-      ( t (
-        (setq doom-font (font-spec :family "MonaspiceKrNerdFont" :size me/doom-font-size))
+      ( t
+        (setq doom-font (font-spec :family "MonaspiceKr Nerd Font" :size me/doom-font-size))
         (setq doom-theme 'doom-acario-dark)
-        ))
+        )
 )
 
 (use-package! copilot
