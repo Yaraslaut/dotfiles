@@ -2,6 +2,12 @@ export HISTSIZE=50000
 export SAVEHIST=50000
 ZSH_THEME="robbyrussell"
 
+function commit () {
+  git add -A
+  git commit -m "$1"
+  git push
+}
+
 # get current directory
 BASEDIR=$(dirname "$0")
 
