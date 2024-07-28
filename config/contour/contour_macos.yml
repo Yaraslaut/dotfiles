@@ -268,7 +268,7 @@ profiles:
 
         history:
             # Number of lines to preserve (-1 for infinite).
-            limit: 1000000
+            limit: 1000
             # Boolean indicating whether or not to scroll down to the bottom on screen updates.
             auto_scroll_on_update: true
             # Number of lines to scroll on ScrollUp & ScrollDown events.
@@ -342,7 +342,7 @@ profiles:
                 weight: normal
                 slant: normal
                 features: [dlig]
-                fallback: [ "Unifont", "JuliaMono" ]
+                fallback: [ "Apple SD Gothic Neo", "JuliaMono" ]
 
             # If bold/italic/bold_italic are not explicitly specified, the regular font with
             # the respective weight and slant will be used.

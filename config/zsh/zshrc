@@ -20,7 +20,7 @@ elif [ $systemName = "Green.local" ]; then
 else
 fi
 
-export PATH="$PATH:$LOC_PATH"
+export PATH="$LOC_PATH:$PATH"
 alias cdr="cd $LOC_HOME/repo"
 
 

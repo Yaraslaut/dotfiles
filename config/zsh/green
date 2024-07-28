@@ -1,3 +1,7 @@
 
 export LOC_HOME=/Users/yaraslau
-export LOC_PATH=/opt/homebrew/bin
+export LOC_PATH="/opt/homebrew/opt/llvm/bin:/opt/homebrew/bin"
+
+#LDFLAGS="-L/opt/homebrew/opt/llvm/lib/c++ -Wl,-rpath,/opt/homebrew/opt/llvm/lib/c++"
+#export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
+#export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
