@@ -268,7 +268,7 @@ profiles:
 
         history:
             # Number of lines to preserve (-1 for infinite).
-            limit: 100000
+            limit: 1000
             # Boolean indicating whether or not to scroll down to the bottom on screen updates.
             auto_scroll_on_update: true
             # Number of lines to scroll on ScrollUp & ScrollDown events.
@@ -321,16 +321,14 @@ profiles:
         # Font related configuration (font face, styles, size, rendering mode).
         font:
             # Initial font size in pixels.
-            size: 13
-            locator: native
+            size: 12
 
             text_shaping:
                 engine: native
 
             builtin_box_drawing: true
 
-            render_mode: lcd
-
+            render_mode: light
             strict_spacing: true
 
             regular:
