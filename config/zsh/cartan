@@ -1,2 +1,2 @@
-
-export LOC_HOME=/home/yaraslau
+export LOC_HOME="/home/yaraslau"
+export LOC_PATH="/home/yaraslau/.local/bin"
