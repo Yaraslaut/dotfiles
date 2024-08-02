@@ -220,8 +220,8 @@ profiles:
         search_mode_switch: false
 
         bell:
-          sound: "off"
-          volume: 0.1
+          sound: default
+          volume: 0.0
           alert: true
 
         # Defines the class part of the WM_CLASS property of the window.

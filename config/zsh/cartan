@@ -1,2 +1,4 @@
 export LOC_HOME="/home/yaraslau"
-export LOC_PATH="/home/yaraslau/.local/bin"
+export LOC_PATH="/home/yaraslau/.local/bin:/home/yaraslau/.local/llvm-19/bin"
+export CXX=/home/yaraslau/.local/llvm-19/bin/clang++
+export CC=/home/yaraslau/.local/llvm-19/bin/clang
