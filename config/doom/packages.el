@@ -23,6 +23,14 @@
 (package! copilot
       :recipe (:host github :repo "copilot-emacs/copilot.el" :files ("*.el" "dist")))
 
+(package! qml-ts-mode
+  :recipe (:host github :repo "xhcoding/qml-ts-mode" :files ("*.el"))
+  )
+
+
+
+
+
 ;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:
 ;; (package! some-package)
 
