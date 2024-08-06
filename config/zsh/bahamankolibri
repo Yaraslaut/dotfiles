@@ -1,0 +1,3 @@
+
+export LOC_HOME=/worktmp/yaraslau/
+export LOC_PATH="/worktmp/yaraslau/.local/bin:/worktmp/yaraslau/.juliaup/bin"

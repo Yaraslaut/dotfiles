@@ -17,11 +17,18 @@ if [ $systemName = "Cartan" ]; then
     source $BASEDIR/cartan
 elif [ $systemName = "Green.local" ]; then
    source $BASEDIR/green
+elif [ $systemName = "bahamankolibri.lin.tuni.fi" ]; then
+   source $BASEDIR/bahamankolibri
 else
 fi
 
 export PATH="$LOC_PATH:$PATH"
-alias cdr="cd $LOC_HOME/repo"
+
+if [ $systemName = "bahamankolibri.lin.tuni.fi" ]; then
+  alias cdr="cd $LOC_HOME/repository"
+else
+  alias cdr="cd $LOC_HOME/repo"
+fi
 
 
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
