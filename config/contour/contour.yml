@@ -753,7 +753,7 @@ input_mapping:
     - { mods: [Control],        key: ".",             action: ToggleStatusLine }
     - { mods: [],               key: Escape,        action: CancelSelection, mode: 'Select|Insert' }
     - { mods: [Control, Shift], key: Space,         action: ViNormalMode, mode: 'Insert' }
-    - { mods: [Control, Shift], key: Comma,         action: OpenConfiguration }
+    - { mods: [Control], key: Comma,         action: OpenConfiguration }
     - { mods: [Control, Shift], key: Q,             action: Quit }
     - { mods: [Control],        mouse: WheelDown,   action: DecreaseFontSize }
     - { mods: [Control],        mouse: WheelUp,     action: IncreaseFontSize }

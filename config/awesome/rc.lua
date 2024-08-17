@@ -613,3 +613,6 @@ end)
 client.connect_signal("mouse::enter", function(c)
     c:activate { context = "mouse_enter", raise = false }
 end)
+
+
+os.execute("xset r rate 300 35")
