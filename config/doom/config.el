@@ -8,11 +8,18 @@
 
 
 ;;; only for not Green.local
+(cond ( (equal system-name "bahamankolibri.lin.tuni.fi")
+        (setq copilot-node-executable "/worktmp/yaraslau/programs/node-v20.12.2-linux-x64/bin/node") )
+)      
+
+
 (cond ( (equal system-name "Green.local") )
       ( t
         (setq doom-font (font-spec :family "MonaspiceKr Nerd Font" :size me/doom-font-size))
         )
 )
+
+
 
 (setq doom-theme 'doom-acario-dark)
 
@@ -23,6 +30,7 @@
               ("TAB" . 'copilot-accept-completion)
               ("C-TAB" . 'copilot-accept-completion-by-word)
               ("C-<tab>" . 'copilot-accept-completion-by-word)))
+
 
 
 (cond
