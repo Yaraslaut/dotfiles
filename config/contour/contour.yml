@@ -228,8 +228,6 @@ profiles:
         wm_class: "contour"
 
         # Environment variables to be passed to the shell.
-        # environment:
-        #     TERM: contour
         #     COLORTERM: truecolor
 
         # Determines the terminal type that is being advertised.
@@ -340,7 +338,7 @@ profiles:
                 weight: normal
                 slant: normal
                 features: [dlig]
-                fallback: [ "Unifont", "JuliaMono" ]
+                #fallback: [ "Unifont", "JuliaMono" ]
 
             # If bold/italic/bold_italic are not explicitly specified, the regular font with
             # the respective weight and slant will be used.
@@ -419,7 +417,7 @@ profiles:
 
             indicator:
                 left: "{InputMode:Bold,Color=#FFFF00}{SearchPrompt:Left= │ }{TraceMode:Bold,Color=#FFFF00,Left= │ }{ProtectedMode:Bold,Left= │ }"
-                middle: "{Title:Left= « ,Right= » } {Clock:Bold} "
+                middle: "{Tabs}{Title:Left= « ,Right= » } {Clock:Bold} "
                 right: " {HistoryLineCount:Faint,Color=#000000}"
 
         # Background configuration
@@ -772,6 +770,19 @@ input_mapping:
     - { mods: [Control, Shift], key: 'H',           action: NoSearchHighlight }
     - { mods: [],               key: 'F3',          action: FocusNextSearchMatch }
     - { mods: [Shift],          key: 'F3',          action: FocusPreviousSearchMatch }
-    - { mods: [Control],        key: I,             action: SendChars, chars: 'ls\n'}
-      #- { mods: [Control],        key: o,             action: WriteScreen, chars: '\033[?4h \033[1 p'}
-      #- { mods: [Control],        key: p,             action: WriteScreen, chars: '\033[?4h \033[9 p'}
+    - { mods: [Alt],            key: n,             action: CreateNewTab }
+    - { mods: [Alt],            key: w,             action: CloseTab }
+    - { mods: [Alt],            key: q,             action: SwitchToTabLeft }
+    - { mods: [Alt],            key: e,             action: SwitchToTabRight }
+    - { mods: [Alt],            key: 1,             action: SwitchToTab, position: 1 }
+    - { mods: [Alt],            key: 2,             action: SwitchToTab, position: 2 }
+    - { mods: [Alt],            key: 3,             action: SwitchToTab, position: 3 }
+    - { mods: [Alt],            key: 4,             action: SwitchToTab, position: 4 }
+    - { mods: [Alt],            key: 5,             action: SwitchToTab, position: 5 }
+    - { mods: [Alt],            key: 6,             action: SwitchToTab, position: 6 }
+    #- { mods: [Control],        key: I,             action: SendChars, chars: 'ls\n'}
+    #- { mods: [Control],        key: LeftArrow,             action: WriteScreen, chars: '\e[1;9C]'}
+    #- { mods: [Control],        key: LeftArrow,             action: WriteScreen, chars: '\e[1;5C]'}
+    #- { mods: [Control],        key: RightArrow,             action: WriteScreen, chars: '\e[1;5D]'}
+    #- { mods: [Control],        key: o,             action: WriteScreen, chars: '\033[?4h \033[1 p'}
+    #- { mods: [Control],        key: p,             action: WriteScreen, chars: '\033[?4h \033[9 p'}
