@@ -1,6 +1,6 @@
 export HISTSIZE=50000
 export SAVEHIST=50000
-ZSH_THEME="robbyrussell"
+ZSH_THEME="arrow"
 
 function commit () {
   git add -A
