@@ -219,6 +219,8 @@ profiles:
         # Whether or not to switch from search mode into insert on exit
         search_mode_switch: false
 
+        insert_after_yank: false
+
         bell:
           sound: "off"
           volume: 0.1
@@ -342,7 +344,7 @@ profiles:
                 weight: normal
                 slant: normal
                 features: [dlig]
-                fallback: [ "Apple SD Gothic Neo", "JuliaMono" ]
+                #fallback: [ "Apple SD Gothic Neo", "JuliaMono" ]
 
             # If bold/italic/bold_italic are not explicitly specified, the regular font with
             # the respective weight and slant will be used.
@@ -754,7 +756,7 @@ input_mapping:
     - { mods: [Control],        key: V,             action: CancelSelection, mode: 'Select|Insert' }
     - { mods: [Control],        key: ".",             action: ToggleStatusLine }
     - { mods: [],               key: Escape,        action: CancelSelection, mode: 'Select|Insert' }
-    - { mods: [Control, Shift], key: Space,         action: ViNormalMode, mode: 'Insert' }
+    - { mods: [Shift], key: Space,         action: ViNormalMode, mode: 'Insert' }
     - { mods: [Control, Shift], key: Comma,         action: OpenConfiguration }
     - { mods: [Control, Shift], key: Q,             action: Quit }
     - { mods: [Control],        mouse: WheelDown,   action: DecreaseFontSize }
@@ -775,5 +777,15 @@ input_mapping:
     - { mods: [],               key: 'F3',          action: FocusNextSearchMatch }
     - { mods: [Shift],          key: 'F3',          action: FocusPreviousSearchMatch }
     - { mods: [Control],        key: I,             action: SendChars, chars: 'ls\n'}
-      #- { mods: [Control],        key: o,             action: WriteScreen, chars: '\033[?4h \033[1 p'}
+    - { mods: [Control],        key: T,             action: CreateNewTab }
+    - { mods: [Control],        key: W,             action: CloseTab }
+    - { mods: [Control],        key: Q,             action: SwitchToTabLeft }
+    - { mods: [Control],        key: E,             action: SwitchToTabRight }
+    - { mods: [Alt],            key: 1,             action: SwitchToTab, position: 1 }
+    - { mods: [Alt],            key: 2,             action: SwitchToTab, position: 2 }
+    - { mods: [Alt],            key: 3,             action: SwitchToTab, position: 3 }
+    - { mods: [Alt],            key: 4,             action: SwitchToTab, position: 4 }
+    - { mods: [Alt],            key: 5,             action: SwitchToTab, position: 5 }
+    - { mods: [Alt],            key: 6,             action: SwitchToTab, position: 6 }
+    #- { mods: [Control],        key: o,             action: WriteScreen, chars: '\033[?4h \033[1 p'}
       #- { mods: [Control],        key: p,             action: WriteScreen, chars: '\033[?4h \033[9 p'}
