@@ -21,7 +21,7 @@ renderer:
     # - default     Uses the default rendering option as decided by the terminal.
     # - software    Uses software-based rendering.
     # - OpenGL      Use (possibly) hardware accelerated OpenGL
-    backend: OpenGL
+    backend: default
 
     # Number of hashtable slots to map to the texture tiles.
     # Larger values may increase performance, but too large may also decrease.
@@ -333,7 +333,8 @@ profiles:
                 #family: "SFMono"
                 family: "MonaspiceKrNerdFont"
                 #family: "cascadiaCode"
-                #family: "JetBrainsMono Nerd Font"
+                #family:" "JetBrainsMono Nerd Font"
+                #family: "UbuntuMono Nerd Font"
 
                 weight: normal
                 slant: normal
