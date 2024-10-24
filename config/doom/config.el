@@ -53,3 +53,19 @@
 (cond ( (equal system-name "Green.local") )
       ( t (add-hook 'after-save-hook 'lsp-format-buffer))
 )
+
+
+
+(defun insert-quotes (open close)
+  (if (region-active-p)
+      (progn
+        (let* ((mark-start (region-beginning))
+               (mark-end (region-end)))
+          (goto-char mark-end)
+          (insert close)
+          (goto-char mark-start)
+          (insert open)))
+    (insert open close))
+  (backward-char))
+
+;(global-set-key (kbd "C-c e") (lambda() (interactive) (insert-quotes  "\"" "\\n\"")))

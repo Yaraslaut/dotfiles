@@ -143,8 +143,12 @@ profiles:
         # If nothing is specified, the users' default login shell will be used.
         # But you may as well log in to a remote host.
         shell: "zsh"
-        # arguments: ["some", "optional", "arguments", "for", "the", "shell"]
-
+        #arguments: ["--verbose"]
+        # Sets initial working directory when spawning a new terminal.
+        # A leading ~ is expanded to the user's home directory.
+        # Default value is the user's home directory.
+        initial_working_directory: "~"
+        
 
         # Builtin SSH-client configuration.
         # Use this to directly connect to an SSH server.
@@ -198,10 +202,6 @@ profiles:
         # Default value is 0.
         copy_last_mark_range_offset: 0
 
-        # Sets initial working directory when spawning a new terminal.
-        # A leading ~ is expanded to the user's home directory.
-        # Default value is the user's home directory.
-        initial_working_directory: "~"
 
         # When this profile is *activated*, this flag decides
         # whether or not the title bar will be shown
@@ -285,7 +285,7 @@ profiles:
             # whether or not to hide mouse when typing
             #
             # Default value: true
-            hide_while_typing: false
+            hide_while_typing: true
 
         # Some VT sequences should need access permissions.
         #
@@ -736,7 +736,8 @@ input_mapping:
     - { mods: [],               mouse: WheelDown,   action: ScrollDown }
     - { mods: [],               mouse: WheelUp,     action: ScrollUp }
     - { mods: [Alt],            key: Enter,         action: ToggleFullscreen }
-    - { mods: [Control, Alt],   key: S,             action: ScreenshotVT }
+    #- { mods: [Control, Alt],   key: S,             action: ScreenshotVT }
+    #- { mods: [Control, Alt],   key: S,             action: CopyScreenshot }
     - { mods: [Control, Shift], key: Plus,          action: IncreaseFontSize }
     - { mods: [Control],        key: '0',           action: ResetFontSize }
     - { mods: [Control, Shift], key: Minus,         action: DecreaseFontSize }
