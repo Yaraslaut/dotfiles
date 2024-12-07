@@ -447,6 +447,10 @@ profiles:
     large:
         terminal_size:
             columns: 120
+
+    tmux_shell:
+        shell: "tmux"
+
 # Color Profiles
 # --------------
 #
