@@ -1,0 +1,4 @@
+CURRENT_DIR="$( dirname -- "$BASH_SOURCE"; )"
+alias te="emacs -nw"
+eval "$(fzf --bash)"
+echo "Welcome to Develop"

@@ -221,7 +221,7 @@ profiles:
 
         bell:
           sound: default
-          volume: 0.0
+          volume: 1.0
           alert: true
 
         # Defines the class part of the WM_CLASS property of the window.
