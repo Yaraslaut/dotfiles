@@ -451,6 +451,13 @@ profiles:
     tmux_shell:
         shell: "tmux"
 
+    emacs:
+        shell: "emacs"
+        arguments: ["-nw"]
+        status_line:
+            display: none
+
+
 # Color Profiles
 # --------------
 #
