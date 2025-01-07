@@ -268,8 +268,6 @@ awful.keyboard.append_global_keybindings({
               {description = "run emacs", group = "emacs"}),
     awful.key({ modkey,           }, "c", function () awful.spawn("/home/yaraslau/.local/bin/contour") end,
               {description = "run contour", group = "contour"}),
-    awful.key({ modkey,           }, "x", function () awful.spawn("/home/yaraslau/repo/keym/keym") end,
-              {description = "run contour", group = "contour"}),
     awful.key({ modkey, "Control" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit,
