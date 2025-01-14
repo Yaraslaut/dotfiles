@@ -418,7 +418,7 @@ profiles:
 
             indicator:
                 left: "{InputMode:Bold,Color=#FFFF00}{SearchPrompt:Left= │ }{TraceMode:Bold,Color=#FFFF00,Left= │ }{ProtectedMode:Bold,Left= │ }"
-                middle: "{Tabs:ActiveColor=#000000,ActiveBackground=#00cd00}{Title:Left= « ,Right= » } {Clock:Bold} "
+                middle: "{Tabs:ActiveColor=#000000,ActiveBackground=#00cd00}{Clock:Bold} "
                 right: " {HistoryLineCount:Faint,Color=#000000}"
 
         # Background configuration

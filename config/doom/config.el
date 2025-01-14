@@ -1,7 +1,7 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
 (setq doom-theme 'doom-acario-dark)
-(setq doom-theme 'doom-acario-light)
+;;(setq doom-theme 'doom-acario-light)
 (setq doom-font-increment 1)
 (setq me/doom-font-size 14)
 
