@@ -11,7 +11,7 @@
      "df6dfd55673f40364b1970440f0b0cb8ba7149282cf415b81aaad2d98b0f0290" default))
  '(magit-todos-insert-after '(bottom) nil nil "Changed by setter of obsolete option `magit-todos-insert-at'")
  '(org-agenda-files '("~/repo/Unsorted/daniela/calendar/current.org"))
- '(package-selected-packages '(company-qml jsonrpc qml-mode)))
+ '(package-selected-packages '(centered-window company-qml jsonrpc qml-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
