@@ -418,7 +418,7 @@ profiles:
 
             indicator:
                 left: "{InputMode:Bold,Color=#FFFF00}{SearchPrompt:Left= │ }{TraceMode:Bold,Color=#FFFF00,Left= │ }{ProtectedMode:Bold,Left= │ }"
-                middle: "{Tabs:ActiveColor=#000000,ActiveBackground=#00cd00}{Clock:Bold} "
+                middle: "{Tabs:ActiveColor=#000000,ActiveBackground=#00cd00,Indexing=Title} {Clock:Bold}"
                 right: " {HistoryLineCount:Faint,Color=#000000}"
 
         # Background configuration
@@ -443,6 +443,24 @@ profiles:
             host: 192.168.50.20
             port: 22
             user: user
+
+
+    remote:
+        ssh:
+            host: 159.65.115.185
+            port: 22
+            user: root
+            private_key: "~/.ssh/id_rsa"
+        terminal_size:
+            columns: 120
+            lines: 24
+
+    fonttest:
+        font:
+            size: 12
+            regular:
+                #family: "VLGothic"
+                family: "UbuntuMono Nerd Font"
 
     large:
         terminal_size:
@@ -793,6 +811,7 @@ input_mapping:
     - { mods: [Alt],            key: 4,             action: SwitchToTab, position: 4 }
     - { mods: [Alt],            key: 5,             action: SwitchToTab, position: 5 }
     - { mods: [Alt],            key: 6,             action: SwitchToTab, position: 6 }
+    - { mods: [Control],        key: N,             action: SetTabName }
     #- { mods: [Control],        key: I,             action: SendChars, chars: 'ls\n'}
     #- { mods: [Control],        key: LeftArrow,             action: WriteScreen, chars: '\e[1;9C]'}
     #- { mods: [Control],        key: LeftArrow,             action: WriteScreen, chars: '\e[1;5C]'}
