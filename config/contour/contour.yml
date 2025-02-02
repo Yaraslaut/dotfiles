@@ -65,6 +65,9 @@ pty_buffer_size: 1048576
 
 default_profile: main
 
+profile_to_use:
+    macos: macos_font
+
 early_exit_threshold: 0
 
 # Flag to determine whether to spawn new process or not when creating new terminal
@@ -247,6 +250,8 @@ profiles:
 
         slow_scrolling_time: 1900
 
+        command_as_alt: true
+
         # Determines the initial terminal size in characters.
         terminal_size:
             columns: 100
@@ -320,18 +325,19 @@ profiles:
         font:
             # Initial font size in pixels.
             size: 12
+            locator: native
 
             text_shaping:
                 engine: native
 
             builtin_box_drawing: true
 
-            render_mode: light
+            render_mode: lcd
             strict_spacing: true
 
             regular:
                 #family: "SFMono"
-                family: "MonaspiceKrNerdFont"
+                family: "MonaspiceKr Nerd Font"
                 #family: "cascadiaCode"
                 #family:" "JetBrainsMono Nerd Font"
                 #family: "UbuntuMono Nerd Font"
@@ -475,6 +481,9 @@ profiles:
         status_line:
             display: none
 
+    macos_font:
+        font:
+            size: 11
 
 # Color Profiles
 # --------------
@@ -782,7 +791,7 @@ input_mapping:
     - { mods: [Control],        key: ".",             action: ToggleStatusLine }
     - { mods: [],               key: Escape,        action: CancelSelection, mode: 'Select|Insert' }
     - { mods: [Control, Shift], key: Space,         action: ViNormalMode, mode: 'Insert' }
-    - { mods: [Control], key: Comma,         action: OpenConfiguration }
+    - { mods: [Control],        key: Comma,         action: OpenConfiguration }
     - { mods: [Control, Shift], key: Q,             action: Quit }
     - { mods: [Control],        mouse: WheelDown,   action: DecreaseFontSize }
     - { mods: [Control],        mouse: WheelUp,     action: IncreaseFontSize }
@@ -801,10 +810,10 @@ input_mapping:
     - { mods: [Control, Shift], key: 'H',           action: NoSearchHighlight }
     - { mods: [],               key: 'F3',          action: FocusNextSearchMatch }
     - { mods: [Shift],          key: 'F3',          action: FocusPreviousSearchMatch }
-    - { mods: [Alt],            key: n,             action: CreateNewTab }
-    - { mods: [Alt],            key: w,             action: CloseTab }
-    - { mods: [Alt],            key: q,             action: SwitchToTabLeft }
-    - { mods: [Alt],            key: e,             action: SwitchToTabRight }
+    - { mods: [Alt],            key: N,             action: CreateNewTab }
+    - { mods: [Alt],            key: W,             action: CloseTab }
+    - { mods: [Alt],            key: Q,             action: SwitchToTabLeft }
+    - { mods: [Alt],            key: E,             action: SwitchToTabRight }
     - { mods: [Alt],            key: 1,             action: SwitchToTab, position: 1 }
     - { mods: [Alt],            key: 2,             action: SwitchToTab, position: 2 }
     - { mods: [Alt],            key: 3,             action: SwitchToTab, position: 3 }
