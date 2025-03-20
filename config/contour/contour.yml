@@ -69,7 +69,7 @@ early_exit_threshold: 0
 
 # Flag to determine whether to spawn new process or not when creating new terminal
 # Default: false
-spawn_new_process: false
+spawn_new_process: true
 
 # Whether or not to reflow the lines on terminal resize events.
 # Default: true
@@ -418,7 +418,7 @@ profiles:
 
             indicator:
                 left: "{InputMode:Bold,Color=#FFFF00}{SearchPrompt:Left= │ }{TraceMode:Bold,Color=#FFFF00,Left= │ }{ProtectedMode:Bold,Left= │ }"
-                middle: "{Tabs:ActiveColor=#000000,ActiveBackground=#00cd00,Indexing=Title} {Clock:Bold}"
+                middle: "{Tabs:ActiveColor=#000000,ActiveBackground=#00cd00} {Clock:Bold}"
                 right: " {HistoryLineCount:Faint,Color=#000000}"
 
         # Background configuration

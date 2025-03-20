@@ -15,6 +15,7 @@ BASEDIR=$(dirname "$0")
 systemName=$(uname -n)
 if [ $systemName = "Cartan" ]; then
     source $BASEDIR/cartan
+    source $BASEDIR/fzf_integration
 elif [ $systemName = "Green.local" ]; then
    source $BASEDIR/green
 elif [ $systemName = "bahamankolibri.lin.tuni.fi" ]; then
@@ -41,9 +42,7 @@ echo "Welcome to $systemName"
 plugins=(git fzf history)
 
 alias ls='ls --color=auto'
-alias l='ls -la'
+alias ll='ls -la'
 alias ..="cd .."
 alias pull="git pull"
-alias c="cmake -S . -B build -G Ninja"
-alias b="cmake --build build"
 alias te="emacsclient -nw"

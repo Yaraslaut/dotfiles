@@ -14,7 +14,7 @@
 (cond
      ( (equal (system-name) "Green.local")                (setq system-clangd "/opt/homebrew/opt/llvm/bin/clangd") )
      ( (equal (system-name) "bahamankolibri.lin.tuni.fi") (setq system-clangd "/usr/bin/clangd") )
-     ( (equal (system-name) "Cartan" )                    (setq system-clangd "/home/yaraslau/.local/llvm-20/bin/clangd") )
+     ( (equal (system-name) "Cartan" )                    (setq system-clangd "/home/yaraslau/.local/bin/clangd") )
 )
 
 ;;; only for not Green.local
