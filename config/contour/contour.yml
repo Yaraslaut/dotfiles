@@ -69,7 +69,7 @@ early_exit_threshold: 0
 
 # Flag to determine whether to spawn new process or not when creating new terminal
 # Default: false
-spawn_new_process: true
+spawn_new_process: false
 
 # Whether or not to reflow the lines on terminal resize events.
 # Default: true

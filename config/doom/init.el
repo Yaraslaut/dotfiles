@@ -46,6 +46,7 @@
        lookup              ; navigate your code and its documentation
        lsp               ; M-x vscode
        magit             ; a git porcelain for Emacs
+       debugger          ; stepping through code, to help you add bugs
 
        :os
        (:if IS-MAC macos)  ; improve compatibility with macOS

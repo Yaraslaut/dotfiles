@@ -224,19 +224,9 @@ screen.connect_signal("request::desktop_decoration", function(s)
             step_spacing = 0,
             color = '#21e60b'
          }),
-         spacing = 10,
-         wibox.widget{
-             {
-                 id = "ip_text",
-                 widget=wibox.widget.textbox
-             },
-             set_ip_text = function(setf, text)
-                 setlf.text = text
-             end
-         },
-         spacing = 10,
+         spacing = 30,
          net_speed_widget(),
-         spacing = 10,
+         spacing = 30,
          s.mylayoutbox,
        },
      }
@@ -268,7 +258,7 @@ awful.keyboard.append_global_keybindings({
               {description = "run emacs", group = "emacs"}),
     awful.key({ modkey,           }, "c", function () awful.spawn("contour") end,
               {description = "run contour", group = "contour"}),
-    awful.key({ modkey, "Control" }, "r", awesome.restart,
+    awful.key({ modkey, "Contro,l" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit,
               {description = "quit awesome", group = "awesome"}),
