@@ -13,7 +13,7 @@ theme.wallpaper = "/home/yaraslau/.config/awesome/wallpaper-1.jpg"
 -- }}}
 
 -- {{{ Styles
-theme.font      = "Hack 11"
+theme.font      = "MonaspiceKrNerdFont"
 
 -- {{{ Colors
 theme.fg_normal  = "#DCDCCC"
@@ -63,7 +63,7 @@ theme.titlebar_bg_normal = "#3F3F3F05"
 -- Variables set for theming the menu:
 -- menu_[bg|fg]_[normal|focus]
 -- menu_[border_color|border_width]
-theme.menu_height = dpi(15)
+theme.menu_height = dpi(40)
 theme.menu_width  = dpi(100)
 -- }}}
 

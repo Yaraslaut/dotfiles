@@ -424,7 +424,7 @@ profiles:
 
             indicator:
                 left: "{InputMode:Bold,Color=#FFFF00}{SearchPrompt:Left= │ }{TraceMode:Bold,Color=#FFFF00,Left= │ }{ProtectedMode:Bold,Left= │ }"
-                middle: "{Tabs:ActiveColor=#000000,ActiveBackground=#00cd00,Indexing=Title} {Clock:Bold}"
+                middle: "{Tabs:ActiveColor=#000000,ActiveBackground=#00cd00} {Clock:Bold}"
                 right: " {HistoryLineCount:Faint,Color=#000000}"
 
         # Background configuration
@@ -450,10 +450,9 @@ profiles:
             port: 22
             user: user
 
-
     remote:
         ssh:
-            host: 159.65.115.185
+            host: 157.230.5.122
             port: 22
             user: root
             private_key: "~/.ssh/id_rsa"

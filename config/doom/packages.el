@@ -15,7 +15,6 @@
   ()
 )
 
-
 (package! typst-ts-mode
   :recipe (:host sourcehut :repo "meow_king/typst-ts-mode" :files (:defaults "*.el"))
   )
@@ -27,9 +26,7 @@
   :recipe (:host github :repo "xhcoding/qml-ts-mode" :files ("*.el"))
   )
 
-
-
-
+(package! highlight-symbol)
 
 ;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:
 ;; (package! some-package)

@@ -45,7 +45,7 @@ end)
 beautiful.init("/home/yaraslau/.config/awesome/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "/home/yaraslau/.local/bin/contour"
+terminal = "contour"
 keys = "/home/yaraslau/repo/keym/keym"
 editor = os.getenv("EDITOR") or "emacs"
 editor_cmd = terminal .. " -e " .. editor
@@ -224,19 +224,9 @@ screen.connect_signal("request::desktop_decoration", function(s)
             step_spacing = 0,
             color = '#21e60b'
          }),
-         spacing = 10,
-         wibox.widget{
-             {
-                 id = "ip_text",
-                 widget=wibox.widget.textbox
-             },
-             set_ip_text = function(setf, text)
-                 setlf.text = text
-             end
-         },
-         spacing = 10,
+         spacing = 30,
          net_speed_widget(),
-         spacing = 10,
+         spacing = 30,
          s.mylayoutbox,
        },
      }
@@ -264,11 +254,11 @@ awful.keyboard.append_global_keybindings({
               {description = "run firefox", group = "firefox"}),
     awful.key({ modkey,           }, "t", function () awful.spawn("/home/yaraslau/prog/Telegram/Telegram") end,
               {description = "run Telegram", group = "Telegram"}),
-    awful.key({ modkey,           }, "e", function () awful.spawn("/home/yaraslau/.local/bin/emacs") end,
+    awful.key({ modkey,           }, "e", function () awful.spawn("emacs") end,
               {description = "run emacs", group = "emacs"}),
-    awful.key({ modkey,           }, "c", function () awful.spawn("/home/yaraslau/.local/bin/contour") end,
+    awful.key({ modkey,           }, "c", function () awful.spawn("contour") end,
               {description = "run contour", group = "contour"}),
-    awful.key({ modkey, "Control" }, "r", awesome.restart,
+    awful.key({ modkey, "Contro,l" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit,
               {description = "quit awesome", group = "awesome"}),
