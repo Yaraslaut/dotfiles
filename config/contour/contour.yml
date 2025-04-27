@@ -324,7 +324,7 @@ profiles:
         # Font related configuration (font face, styles, size, rendering mode).
         font:
             # Initial font size in pixels.
-            size: 12
+            size: 8
             locator: native
 
             text_shaping:
