@@ -18,6 +18,13 @@
      ( (equal (system-name) "DESKTOP-SNC6SJB" )           (setq system-clangd "c:/Program Files/Microsoft Visual Studio/2022/Enterprise/VC/Tools/Llvm/x64/bin/clangd.exe") )
 )
 
+(setq lsp-clients-clangd-executable system-clangd)
+
+(cond
+ ( (equal (system-name) "DESKTOP-SNC6SJB") (setq lsp-clients-clangd-args '("--header-insertion=never" "--pch-storage=disk" "--clang-tidy" "-j=16")) )
+ ( t (setq lsp-clients-clangd-args  '("--header-insertion-decorators=0" "--pch-storage=disk" "--clang-tidy" "--background-index" ) ))
+)
+
 ;;; only for not Green.local
 (cond ( (equal (system-name) "Green.local") () )
       ( (equal (system-name) "DESKTOP-SNC6SJB" ) )
@@ -43,21 +50,6 @@
          magit-display-buffer-function #'magit-display-buffer-same-window-except-diff-v1))
 
 
-(use-package! lsp
-  :config
-  (cond
-   ( (equal (system-name) "DESKTOP-SNC6SJB" )
-     (setq
-      lsp-clients-clangd-executable system-clangd
-      lsp-clients-clangd-args '("--header-insertion-decorators=0" "--pch-storage=disk" "-j=16") )
-     )
-   ( ()
-     (setq
-      lsp-clients-clangd-executable system-clangd
-      lsp-clients-clangd-args '("--header-insertion-decorators=0" "--pch-storage=disk" "--clang-tidy"))
-     )
-   )
-  )
 
 (cond ( (equal (system-name) "bahamankolibri.lin.tuni.fi")
         (setq copilot-node-executable "/worktmp/yaraslau/programs/node-v20.12.2-linux-x64/bin/node") )
