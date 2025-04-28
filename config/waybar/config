@@ -55,6 +55,7 @@
 
     "network": {
         "format": "  \u21D1 {bandwidthUpBytes} \u21D3 {bandwidthDownBytes}",
+        "interval": 1
     },
 
     "custom/vpn": {
