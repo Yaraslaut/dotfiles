@@ -3,7 +3,7 @@
 (setq doom-theme 'doom-dark+)
 ;;(setq doom-theme 'doom-acario-light)
 (setq doom-font-increment 1)
-(setq me/doom-font-size 18)
+(setq me/doom-font-size 22)
 (setq display-line-numbers-mode t)
 
 ;; set clang executable for different systems

@@ -545,8 +545,8 @@ color_schemes:
         vi_mode_highlight:
             foreground: CellForeground
             foreground_alpha: 1.0
-            background: '#ffa500'
-            background_alpha: 0.5
+            background: '#080808'
+            background_alpha: 1.0
 
         # Color override for the current cursor's line when in vi_mode:
         # The value format is equivalent to how selection colors and alpha contribution is defined.
@@ -587,15 +587,15 @@ color_schemes:
 
         # Search match highlighting. Similar to selection highlighting.
         search_highlight:
-            foreground: CellBackground
-            background: CellForeground
+            foreground: '#00ffff'
+            background: CellBackground
             foreground_alpha: 1.0
             background_alpha: 1.0
 
         # Search match highlighting (focused term). Similar to selection highlighting.
         search_highlight_focused:
-            foreground: CellBackground
-            background: CellForeground
+            foreground: '#8b0000'
+            background: '#ffffff'
             foreground_alpha: 1.0
             background_alpha: 1.0
 
@@ -614,9 +614,9 @@ color_schemes:
         # The format is similar to selection highlighting.
         word_highlight_other:
             foreground: CellForeground
-            background: '#909090'
+            background: CellBackground
             foreground_alpha: 1.0
-            background_alpha: 0.5
+            background_alpha: 1.0
 
         # Defines the colors to be used for the Indicator status line.
         # Values must be in RGB form.

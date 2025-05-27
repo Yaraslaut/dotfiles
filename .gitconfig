@@ -6,7 +6,7 @@
 [pull]
 	ff = only
 [core]
-	editor = emacs
+	editor = vim
 [safe]
 	directory = *
 [transfer]
