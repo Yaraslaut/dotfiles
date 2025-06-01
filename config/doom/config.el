@@ -3,7 +3,7 @@
 (setq doom-theme 'doom-dark+)
 ;;(setq doom-theme 'doom-acario-light)
 (setq doom-font-increment 1)
-(setq me/doom-font-size 22)
+(setq me/doom-font-size 20)
 (setq display-line-numbers-mode t)
 
 ;; set clang executable for different systems
@@ -22,7 +22,7 @@
 
 (cond
  ( (equal (system-name) "DESKTOP-SNC6SJB") (setq lsp-clients-clangd-args '("--header-insertion=never" "--pch-storage=disk" "--clang-tidy" "-j=16")) )
- ( t (setq lsp-clients-clangd-args  '("--header-insertion-decorators=0" "--pch-storage=disk" "--clang-tidy" "--background-index" ) ))
+ ( t (setq lsp-clients-clangd-args  '("--header-insertion-decorators=0" "--pch-storage=memory" "--clang-tidy" "-j=16") ))
 )
 
 ;;; only for not Green.local

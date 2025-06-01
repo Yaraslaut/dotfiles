@@ -341,12 +341,13 @@ profiles:
                 #family: "cascadiaCode"
                 #family:" "JetBrainsMono Nerd Font"
                 #family: "UbuntuMono Nerd Font"
+                #family: "UbuntuSansMonoNerdFontMono"
 
-                weight: normal
+                weight: thin
                 slant: normal
-                features: [dlig]
+                #features: [dlig]
                 #fallback: [ "Unifont" ]
-                fallback: [ "Unifont", "JuliaMono" ]
+                #fallback: [ "Unifont", "JuliaMono" ]
 
             # If bold/italic/bold_italic are not explicitly specified, the regular font with
             # the respective weight and slant will be used.
@@ -614,9 +615,9 @@ color_schemes:
         # The format is similar to selection highlighting.
         word_highlight_other:
             foreground: CellForeground
-            background: CellBackground
+            background: '#909090'
             foreground_alpha: 1.0
-            background_alpha: 1.0
+            background_alpha: 0.3
 
         # Defines the colors to be used for the Indicator status line.
         # Values must be in RGB form.
@@ -814,6 +815,7 @@ input_mapping:
     - { mods: [Alt],            key: w,             action: CloseTab }
     - { mods: [Alt],            key: q,             action: SwitchToTabLeft }
     - { mods: [Alt],            key: e,             action: SwitchToTabRight }
+    - { mods: [Alt],            key: r,             action: SwitchToPreviousTab }
     - { mods: [Alt],            key: 1,             action: SwitchToTab, position: 1 }
     - { mods: [Alt],            key: 2,             action: SwitchToTab, position: 2 }
     - { mods: [Alt],            key: 3,             action: SwitchToTab, position: 3 }
