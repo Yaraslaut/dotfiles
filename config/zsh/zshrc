@@ -24,6 +24,7 @@ else
 fi
 
 export PATH="$LOC_PATH:$PATH"
+export VCPKG_ROOT="$HOME/.local/share/vcpkg"
 
 if [ $systemName = "bahamankolibri.lin.tuni.fi" ]; then
   alias cdr="cd $LOC_HOME/repository"
