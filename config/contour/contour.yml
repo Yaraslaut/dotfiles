@@ -588,8 +588,8 @@ color_schemes:
 
         # Search match highlighting. Similar to selection highlighting.
         search_highlight:
-            foreground: '#00ffff'
-            background: CellBackground
+            foreground: '#006400'
+            background: "#fff8dc"
             foreground_alpha: 1.0
             background_alpha: 1.0
 
