@@ -25,13 +25,6 @@
  ( t (setq lsp-clients-clangd-args  '("--header-insertion-decorators=0" "--pch-storage=memory" "--clang-tidy" "-j=16") ))
 )
 
-;;; only for not Green.local
-(cond ( (equal (system-name) "Green.local") () )
-      ( (equal (system-name) "DESKTOP-SNC6SJB" ) )
-      ( t (add-hook 'after-save-hook 'lsp-format-buffer))
-)
-
-
 (use-package! copilot
   :hook (prog-mode . copilot-mode)
   :bind (:map copilot-completion-map
