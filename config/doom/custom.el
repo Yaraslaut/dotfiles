@@ -13,7 +13,7 @@
  '(org-agenda-files '("~/repo/Unsorted/daniela/calendar/current.org"))
  '(package-selected-packages
    '(centered-window company-qml highlight-symbol highlight-thing jsonrpc qml-mode
-     tree-sitter-langs))
+     realgud realgud-lldb tree-sitter-langs))
  '(warning-suppress-types '((treesit) (emacs) (defvaralias) (lexical-binding))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
