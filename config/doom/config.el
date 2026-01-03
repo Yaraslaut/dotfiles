@@ -69,5 +69,6 @@
     (insert open close))
   (backward-char))
 
+(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 
 ;(global-set-key (kbd "C-c e") (lambda() (interactive) (insert-quotes  "\"" "\\n\"")))
