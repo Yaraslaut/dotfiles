@@ -14,7 +14,7 @@
 (cond
      ( (equal (system-name) "Green.local")                (setq system-clangd "/opt/homebrew/opt/llvm/bin/clangd") )
      ( (equal (system-name) "bahamankolibri.lin.tuni.fi") (setq system-clangd "/usr/bin/clangd") )
-     ( (equal (system-name) "Cartan" )                    (setq system-clangd "/home/yaraslau/.local/bin/clangd") )
+     ( (equal (system-name) "Cartan" )                    (setq system-clangd "/usr/bin/clangd") )
      ( (equal (system-name) "DESKTOP-SNC6SJB" )           (setq system-clangd "c:/Program Files/Microsoft Visual Studio/2022/Enterprise/VC/Tools/Llvm/x64/bin/clangd.exe") )
 )
 
