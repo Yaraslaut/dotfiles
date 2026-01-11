@@ -18,12 +18,23 @@
      ( (equal (system-name) "DESKTOP-SNC6SJB" )           (setq system-clangd "c:/Program Files/Microsoft Visual Studio/2022/Enterprise/VC/Tools/Llvm/x64/bin/clangd.exe") )
 )
 
+(use-package! claude-code-ide
+  ;;:bind ("C-c C-'" . claude-code-ide-menu)
+  :config
+  (claude-code-ide-emacs-tools-setup))
+
 (setq lsp-clients-clangd-executable system-clangd)
 
 (cond
  ( (equal (system-name) "DESKTOP-SNC6SJB") (setq lsp-clients-clangd-args '("--header-insertion=never" "--pch-storage=disk" "--clang-tidy" "-j=16")) )
  ( t (setq lsp-clients-clangd-args  '("--header-insertion-decorators=0" "--pch-storage=memory" "--clang-tidy" "-j=16") ))
 )
+
+(add-hook 'before-save-hook
+          (lambda ()
+            (when (and (bound-and-true-p lsp-mode)
+                       (lsp-feature? "textDocument/formatting"))
+              (lsp-format-buffer))))
 
 (use-package! copilot
   :hook (prog-mode . copilot-mode)

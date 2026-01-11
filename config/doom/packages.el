@@ -26,6 +26,9 @@
   :recipe (:host github :repo "xhcoding/qml-ts-mode" :files ("*.el"))
   )
 
+(package! claude-code-ide
+  :recipe (:host github :repo "manzaltu/claude-code-ide.el"))
+
 (package! highlight-symbol)
 
 ;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:
